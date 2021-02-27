@@ -62,6 +62,10 @@ app.get('/circulatingsupply/', async function(req, res) {
     .catch((err) => {
       console.log(err);
     })
+ 
+  while(circulatingsupply == null) {
+    
+  }
   
   
   res.status(200).send({"circulatingsupply": circulatingsupply});
