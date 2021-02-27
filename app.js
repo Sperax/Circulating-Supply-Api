@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const axios = require('axios');
 const app = express();
 
+const port = process.env.PORT || 80;
+
 app.get('/circulatingsupply/', async function(req, res) {
   let circulatingsupply = 5000000000;
   let account1 = "0x0f35e69af4db499dfb4ee1bec3e25bf48de2a143";
@@ -65,5 +67,4 @@ app.get('/circulatingsupply/', async function(req, res) {
   res.status(200).send({"circulatingsupply": circulatingsupply});
 })
 
-console.log("Listening at port 3000")
-app.listen(80)
+app.listen(port)
